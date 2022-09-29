@@ -5,9 +5,7 @@ import Searchbar from './Searchbar/Searchbar';
 import { getPixabayPhoto } from '../services/Api/Api';
 import Modal from './Modal';
 import { ImageGallery } from './ImageGallery';
-
-const body = document.querySelector('body');
-
+// const body = document.querySelector('body');
 export const App = () => {
   const [page, setPage] = useState(1);
   const [input, setInput] = useState('');
@@ -66,12 +64,12 @@ export const App = () => {
   const openModal = component => {
     setIsOpen(true);
     setSelected(component);
-    body.classList.add('not_scroll');
+    // body.classList.add('not_scroll');
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    body.classList.remove('not_scroll');
+    // body.classList.remove('not_scroll');
   };
 
   return (

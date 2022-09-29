@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import style from './Modal.module.css';
+const body = document.querySelector('body');
 
 const Modal = ({ modalClose, modalimg }) => {
   useEffect(() => {
@@ -10,9 +10,11 @@ const Modal = ({ modalClose, modalimg }) => {
         modalClose();
       }
     };
+    body.classList.add('not_scroll');
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
+      body.classList.remove('not_scroll');
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [modalClose]);
