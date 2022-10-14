@@ -16,7 +16,7 @@ const Modal = ({ modalClose, modalimg }) => {
 
     return () => {
       // body.classList.remove('not_scroll');
-      document.body.style.overflow = 'none';
+      document.body.style.overflow = 'auto';
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [modalClose]);
